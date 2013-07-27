@@ -1,0 +1,59 @@
+{
+   "abstract" : "search the internet from your terminal",
+   "author" : [
+      "Ahmad Syaltut <Isyaltut@gmail.com>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.130880",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "App-lookup",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "File::Spec" : "0",
+            "FindBin" : "0",
+            "Test::More" : "0",
+            "Test::Output" : "0",
+            "Text::Abbrev" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Browser::Open" : "0",
+            "Config::Tiny" : "0",
+            "File::Basename" : "0",
+            "File::Spec" : "0",
+            "Getopt::Long" : "0",
+            "IPC::System::Simple" : "0",
+            "Pod::Usage" : "0",
+            "Text::Abbrev" : "0",
+            "Text::Wrap" : "0",
+            "URI::Encode" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "App::lookup" : {
+         "file" : "lib/App/lookup.pm",
+         "version" : "0.01"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.01"
+}

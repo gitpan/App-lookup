@@ -1,0 +1,12 @@
+Build.PL
+Changes
+MANIFEST
+README
+bin/lookup
+etc/config.ini
+lib/App/lookup.pm
+t/00-load.t
+t/01-basic.t
+Makefile.PL
+META.yml
+META.json
