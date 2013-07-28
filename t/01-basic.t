@@ -15,7 +15,7 @@ use Text::Abbrev 'abbrev';
 # how do I test this kind of thing anyway?
 
 my $CONFIG_FILE =
-  File::Spec->catfile($FindBin::Bin, File::Spec->updir, 'etc', 'config.ini');
+  File::Spec->catfile($FindBin::Bin, 'config.ini');
 
 stdout_like {
     App::lookup::print_sites(App::lookup::initialize_sites($CONFIG_FILE));

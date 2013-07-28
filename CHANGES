@@ -1,0 +1,4 @@
+0.02
+	- split the elisp part of the documentation into its own file
+0.01
+	- first public release
