@@ -1,0 +1,12 @@
+Revision history for perl module App::lookup
+
+0.02 2013-07-31
+	- use Dist::Zilla::Plugin::ReadmeFromPod to generate the
+	  README
+	- fix the doc in etc/lookup.el
+
+0.02 2013-07-28
+	- split the elisp part of the documentation into its own file
+
+0.01 2013-07-27
+	- first public release

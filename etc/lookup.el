@@ -51,7 +51,7 @@
   If you're using cygwin, you should modify this variable like so
   (see the CAVEATS section in lookup documentation):
 
-      (when (eq 'system-type 'cygwin)
+      (when (eq system-type 'cygwin)
         (setq lookup-command \"lookup -w 'cygstart'\"))"
   :group 'lookup :type 'string)
 

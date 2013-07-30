@@ -32,5 +32,5 @@ requires:
   warnings: 0
 resources:
   homepage: https://github.com/Syaltut/perl-App-lookup
-  repository: https://github.com/Syaltut/perl-App-lookup
-version: 0.02
+  repository: git://github.com/Syaltut/perl-App-lookup.git
+version: 0.03
