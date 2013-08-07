@@ -3,19 +3,25 @@ abstract: 'search the internet from your terminal'
 author:
   - 'Ahmad Syaltut <Isyaltut@gmail.com>'
 build_requires:
+  ExtUtils::MakeMaker: 0
+  File::Spec: 0
   FindBin: 0
   Test::More: 0
   Test::Output: 0
-  perl: 5.006
+  Text::Abbrev: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
-dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.130880'
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: App-lookup
+no_index:
+  directory:
+    - t
+    - inc
 requires:
   Browser::Open: 0
   Config::Tiny: 0
@@ -28,9 +34,7 @@ requires:
   Text::Abbrev: 0
   Text::Wrap: 0
   URI::Encode: 0
-  strict: 0
-  warnings: 0
 resources:
   homepage: https://github.com/Syaltut/perl-App-lookup
   repository: git://github.com/Syaltut/perl-App-lookup.git
-version: 0.03
+version: 0.04

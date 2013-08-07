@@ -1,7 +1,5 @@
 package App::lookup;
 
-# ABSTRACT: search the internet from your terminal
-
 use strict;
 use warnings;
 
@@ -10,7 +8,7 @@ use Getopt::Long qw(:config bundling no_ignore_case);
 use Text::Abbrev 'abbrev';
 use Text::Wrap 'wrap';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub parse_command_line {
     GetOptions(\my %opts, 'help|h|?', 'man|m', 'version|v',
@@ -84,6 +82,7 @@ sub initialize_sites {
     while (my ($alias, $original) = each %$aliases) {
         if (exists $sites{$original}) {
             $sites{$alias} = $sites{$original};
+            delete $sites{$original};
         }
         else {
             warn "The alias '$alias' doesn't match any site\n";
@@ -211,7 +210,7 @@ App::lookup - search the internet from your terminal
 
 =head1 VERSION
 
-version 0.03
+Version 0.04.
 
 =head1 SYNOPSIS
 
@@ -220,7 +219,7 @@ version 0.03
 
 =head1 DESCRIPTION
 
-See B<lookup(1)> documentation.
+See the documentation of B<lookup(1)>.
 
 =head1 AUTHOR
 
@@ -228,9 +227,7 @@ Ahmad Syaltut <Isyaltut@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Isyaltut@gmail.com.
+This software is copyright (c) 2013 by Ahmad Syaltut.
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
-=cut
+This is free software; you can redistribute it and/or modify it under the same
+terms as the Perl 5 programming language system itself.

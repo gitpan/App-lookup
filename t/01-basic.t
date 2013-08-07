@@ -26,7 +26,7 @@ qr{- google : http://google.com/search\?q=%\(query\)\n},
 stdout_like {
     App::lookup::print_sites(App::lookup::initialize_sites($CONFIG_FILE));
 }
-qr{- amazon : http://www.amazon.com/s/&field-keywords=%\(query\)},
+qr{- a\s+: http://www.amazon.com/s/&field-keywords=%\(query\)},
 "the output of the option --print-sites contains amazon (which means the config file is read correctly)";
 
 is_deeply App::lookup::initialize_sites($CONFIG_FILE),
@@ -34,7 +34,6 @@ is_deeply App::lookup::initialize_sites($CONFIG_FILE),
     google => 'http://google.com/search?q=%(query)',
     bing   => 'http://www.bing.com/search?q=%(query)',
     cpan   => 'http://search.cpan.org/search?query=%(query)&mode=all',
-    amazon => 'http://www.amazon.com/s/&field-keywords=%(query)',
     a      => 'http://www.amazon.com/s/&field-keywords=%(query)',
   },
 'initialize_sites returns the expected hashref (with user-defined sites and aliases)';
@@ -44,7 +43,7 @@ subtest 'print abbrevs' => sub {
     my $abbrevs = abbrev keys %$sites;
 
     stdout_like { App::lookup::print_abbrevs($abbrevs, $sites) }
-qr{Name      : amazon\nURL       : http://www.amazon.com/s/&field-keywords=%\(query\)\nAbbrev\(s\) : am, ama, amaz, amazo, amazon\n\nName      : bing\nURL       : http://www.bing.com/search\?q=%\(query\)\nAbbrev\(s\) : b, bi, bin, bing},
+qr{Name      : a\nURL       : http://www.amazon.com/s/&field-keywords=%\(query\)\nAbbrev\(s\) : a\n\nName      : bing\nURL       : http://www.bing.com/search\?q=%\(query\)\nAbbrev\(s\) : b, bi, bin, bing},
       'print_abbrevs prints the expected output';
 };
 

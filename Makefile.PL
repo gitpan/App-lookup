@@ -1,83 +1,40 @@
+use ExtUtils::MakeMaker;
 
-use strict;
-use warnings;
+WriteMakefile(
+    NAME          => 'App::lookup',
+    AUTHOR        => 'Ahmad Syaltut <Isyaltut@gmail.com>',
+    ABSTRACT_FROM => 'lib/App/lookup.pm',
+    VERSION_FROM  => 'lib/App/lookup.pm',
+    LICENSE       => 'Perl_5',
 
+    EXE_FILES => ['bin/lookup'],
 
+    PREREQ_PM => {
+        'Browser::Open'       => 0,
+        'Config::Tiny'        => 0,
+        'File::Basename'      => 0,
+        'File::Spec'          => 0,
+        'Getopt::Long'        => 0,
+        'IPC::System::Simple' => 0,
+        'List::Util'          => 0,
+        'Pod::Usage'          => 0,
+        'Text::Abbrev'        => 0,
+        'Text::Wrap'          => 0,
+        'URI::Encode'         => 0,
+    },
 
-use ExtUtils::MakeMaker 6.30;
+    TEST_REQUIRES => {
+        'Test::More'   => 0,
+        'Test::Output' => 0,
+        'FindBin'      => 0,
+        'File::Spec'   => 0,
+        'Text::Abbrev' => 0,
+    },
 
-
-
-my %WriteMakefileArgs = (
-  "ABSTRACT" => "search the internet from your terminal",
-  "AUTHOR" => "Ahmad Syaltut <Isyaltut\@gmail.com>",
-  "BUILD_REQUIRES" => {},
-  "CONFIGURE_REQUIRES" => {
-    "ExtUtils::MakeMaker" => "6.30"
-  },
-  "DISTNAME" => "App-lookup",
-  "EXE_FILES" => [
-    "bin/lookup"
-  ],
-  "LICENSE" => "perl",
-  "NAME" => "App::lookup",
-  "PREREQ_PM" => {
-    "Browser::Open" => 0,
-    "Config::Tiny" => 0,
-    "File::Basename" => 0,
-    "File::Spec" => 0,
-    "Getopt::Long" => 0,
-    "IPC::System::Simple" => 0,
-    "List::Util" => 0,
-    "Pod::Usage" => 0,
-    "Text::Abbrev" => 0,
-    "Text::Wrap" => 0,
-    "URI::Encode" => 0,
-    "strict" => 0,
-    "warnings" => 0
-  },
-  "TEST_REQUIRES" => {
-    "FindBin" => 0,
-    "Test::More" => 0,
-    "Test::Output" => 0
-  },
-  "VERSION" => "0.03",
-  "test" => {
-    "TESTS" => "t/*.t"
-  }
+    META_MERGE => {
+        resources => {
+            homepage   => 'https://github.com/Syaltut/perl-App-lookup',
+            repository => 'git://github.com/Syaltut/perl-App-lookup.git',
+        },
+    }
 );
-
-
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
-  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
-  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
-  for my $mod ( keys %$tr ) {
-    if ( exists $br->{$mod} ) {
-      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
-    }
-    else {
-      $br->{$mod} = $tr->{$mod};
-    }
-  }
-}
-
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
-  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM};
-  for my $mod ( keys %$br ) {
-    if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
-    }
-    else {
-      $pp->{$mod} = $br->{$mod};
-    }
-  }
-}
-
-delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
-  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
-
-WriteMakefile(%WriteMakefileArgs);
-
-
-

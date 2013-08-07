@@ -1,8 +1,5 @@
 #!/usr/bin/env perl
 
-# PODNAME: lookup
-# ABSTRACT: search the internet from your terminal
-
 use strict;
 use warnings;
 
@@ -20,7 +17,25 @@ lookup - search the internet from your terminal
 
 =head1 VERSION
 
-version 0.03
+Version 0.04.
+
+=head1 USAGE
+
+  lookup [--help] [--man] [--abbrevs] [--config-file FILE] [--sites]
+         [--web-browser COMMAND] [--abbrevs] SITE QUERY
+
+
+=head1 EXAMPLES
+
+  # search google for the phrase 'perl is pretty awesome'
+  lookup google 'perl is pretty awesome'
+
+  # same thing, with abbreviated SITE g (or go, or goo, or goog
+  # or ... you get the idea)
+  lookup g 'perl is pretty awesome'
+
+  # ditto, but arguments to QUERY are not quoted
+  lookup google perl is pretty awesome
 
 =head1 DESCRIPTION
 
@@ -65,23 +80,6 @@ L<bing|http://www.bing.com> with either one of the following commands:
   lookup bin foobar
   lookup bi foobar
   lookup b foobar
-
-=head1 USAGE
-
-  lookup [--help] [--man] [--abbrevs] [--config-file FILE] [--sites]
-         [--web-browser COMMAND] [--abbrevs] SITE QUERY
-
-=head1 EXAMPLES
-
-  # search google for the phrase 'perl is pretty awesome'
-  lookup google 'perl is pretty awesome'
-
-  # same thing, with abbreviated SITE g (or go, or goo, or goog
-  # or ... you get the idea)
-  lookup g 'perl is pretty awesome'
-
-  # ditto, but arguments to QUERY are not quoted
-  lookup google perl is pretty awesome
 
 =head1 OPTIONS
 
@@ -249,9 +247,7 @@ Ahmad Syaltut <Isyaltut@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Isyaltut@gmail.com.
+This software is copyright (c) 2013 by Ahmad Syaltut.
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
-=cut
+This is free software; you can redistribute it and/or modify it under the same
+terms as the Perl 5 programming language system itself.
