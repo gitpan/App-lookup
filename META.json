@@ -1,10 +1,10 @@
 {
    "abstract" : "search the internet from your terminal",
    "author" : [
-      "Ahmad Syaltut <Isyaltut@gmail.com>"
+      "Ahmad Syaltut <syaltut@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.130880",
    "license" : [
       "perl_5"
    ],
@@ -15,24 +15,14 @@
    "name" : "App-lookup",
    "no_index" : {
       "directory" : [
-         "t",
-         "inc"
+         "etc",
+         "t"
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "0",
-            "File::Spec" : "0",
-            "FindBin" : "0",
-            "Test::More" : "0",
-            "Test::Output" : "0",
-            "Text::Abbrev" : "0"
-         }
-      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0"
+            "Module::Build" : "0.40"
          }
       },
       "runtime" : {
@@ -51,12 +41,28 @@
          }
       }
    },
+   "provides" : {
+      "App::lookup" : {
+         "file" : "lib/App/lookup.pm",
+         "version" : "0.05"
+      }
+   },
    "release_status" : "stable",
    "resources" : {
       "homepage" : "https://github.com/Syaltut/perl-App-lookup",
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
       "repository" : {
          "url" : "git://github.com/Syaltut/perl-App-lookup.git"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05",
+   "x_test_requires" : {
+      "File::Spec" : "0",
+      "FindBin" : "0",
+      "Test::More" : "0",
+      "Test::Output" : "0",
+      "Text::Abbrev" : "0"
+   }
 }

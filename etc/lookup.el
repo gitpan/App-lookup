@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2013 Ahmad Syaltut
 
-;; Author: Ahmad Syaltut <Isyaltut@gmail.com>
+;; Author: Ahmad Syaltut <syaltut@cpan.org>
 ;; Keywords: perl, processes, tools
 
 ;; This program is free software: you can redistribute it and/or modify

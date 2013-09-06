@@ -5,6 +5,8 @@ use warnings;
 
 use App::lookup;
 
+our $VERSION = '0.05';
+
 App::lookup->run
 
 __END__
@@ -17,13 +19,12 @@ lookup - search the internet from your terminal
 
 =head1 VERSION
 
-Version 0.04.
+Version 0.05.
 
 =head1 USAGE
 
   lookup [--help] [--man] [--abbrevs] [--config-file FILE] [--sites]
          [--web-browser COMMAND] [--abbrevs] SITE QUERY
-
 
 =head1 EXAMPLES
 
@@ -243,7 +244,7 @@ L<Browser::Open>.
 
 =head1 AUTHOR
 
-Ahmad Syaltut <Isyaltut@gmail.com>
+Ahmad Syaltut <syaltut@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

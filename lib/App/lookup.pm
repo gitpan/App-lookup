@@ -8,7 +8,7 @@ use Getopt::Long qw(:config bundling no_ignore_case);
 use Text::Abbrev 'abbrev';
 use Text::Wrap 'wrap';
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub parse_command_line {
     GetOptions(\my %opts, 'help|h|?', 'man|m', 'version|v',
@@ -210,7 +210,7 @@ App::lookup - search the internet from your terminal
 
 =head1 VERSION
 
-Version 0.04.
+Version 0.05.
 
 =head1 SYNOPSIS
 
@@ -223,7 +223,7 @@ See the documentation of B<lookup(1)>.
 
 =head1 AUTHOR
 
-Ahmad Syaltut <Isyaltut@gmail.com>
+Ahmad Syaltut <syaltut@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

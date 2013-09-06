@@ -1,15 +1,23 @@
-use ExtUtils::MakeMaker;
+use Module::Build;
 
-WriteMakefile(
-    NAME          => 'App::lookup',
-    AUTHOR        => 'Ahmad Syaltut <Isyaltut@gmail.com>',
-    ABSTRACT_FROM => 'lib/App/lookup.pm',
-    VERSION_FROM  => 'lib/App/lookup.pm',
-    LICENSE       => 'Perl_5',
+Module::Build->new(
+    module_name    => 'App::lookup',
+    license        => 'perl',
+    create_license => 1,
+    create_readme  => 1,
 
-    EXE_FILES => ['bin/lookup'],
+    dist_version_from => 'bin/lookup',
+    script_files      => [qw(bin/lookup)],
 
-    PREREQ_PM => {
+    test_requires => {
+        'Test::More'   => 0,
+        'Test::Output' => 0,
+        'FindBin'      => 0,
+        'File::Spec'   => 0,
+        'Text::Abbrev' => 0,
+    },
+
+    requires => {
         'Browser::Open'       => 0,
         'Config::Tiny'        => 0,
         'File::Basename'      => 0,
@@ -23,18 +31,14 @@ WriteMakefile(
         'URI::Encode'         => 0,
     },
 
-    TEST_REQUIRES => {
-        'Test::More'   => 0,
-        'Test::Output' => 0,
-        'FindBin'      => 0,
-        'File::Spec'   => 0,
-        'Text::Abbrev' => 0,
-    },
-
-    META_MERGE => {
+    meta_merge => {
         resources => {
             homepage   => 'https://github.com/Syaltut/perl-App-lookup',
             repository => 'git://github.com/Syaltut/perl-App-lookup.git',
         },
+    },
+
+    no_index => {
+        directory => [qw(etc t )],
     }
-);
+)->create_build_script;

@@ -2,7 +2,7 @@ NAME
     lookup - search the internet from your terminal
 
 VERSION
-    Version 0.04.
+    Version 0.05.
 
 USAGE
       lookup [--help] [--man] [--abbrevs] [--config-file FILE] [--sites]
@@ -196,7 +196,7 @@ CAVEATS, BUGS, AND TODOS
         Browser::Open.
 
 AUTHOR
-    Ahmad Syaltut <Isyaltut@gmail.com>
+    Ahmad Syaltut <syaltut@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2013 by Ahmad Syaltut.

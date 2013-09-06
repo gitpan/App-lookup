@@ -1,18 +1,12 @@
 ---
 abstract: 'search the internet from your terminal'
 author:
-  - 'Ahmad Syaltut <Isyaltut@gmail.com>'
-build_requires:
-  ExtUtils::MakeMaker: 0
-  File::Spec: 0
-  FindBin: 0
-  Test::More: 0
-  Test::Output: 0
-  Text::Abbrev: 0
+  - 'Ahmad Syaltut <syaltut@cpan.org>'
+build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 0
+  Module::Build: 0.40
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.130880'
+generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,8 +14,12 @@ meta-spec:
 name: App-lookup
 no_index:
   directory:
+    - etc
     - t
-    - inc
+provides:
+  App::lookup:
+    file: lib/App/lookup.pm
+    version: 0.05
 requires:
   Browser::Open: 0
   Config::Tiny: 0
@@ -36,5 +34,12 @@ requires:
   URI::Encode: 0
 resources:
   homepage: https://github.com/Syaltut/perl-App-lookup
+  license: http://dev.perl.org/licenses/
   repository: git://github.com/Syaltut/perl-App-lookup.git
-version: 0.04
+version: 0.05
+x_test_requires:
+  File::Spec: 0
+  FindBin: 0
+  Test::More: 0
+  Test::Output: 0
+  Text::Abbrev: 0
