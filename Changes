@@ -1,5 +1,9 @@
 Revision history for perl module App::lookup
 
+0.06 2013-10-01
+	- bump the required version of Module::Build (see
+	  https://rt.cpan.org/Public/Bug/Display.html?id=89091)
+
 0.04 2013-08-07
 	- switch to ExtUtils::MakeMaker
 	- Delete the name of original sites when their aliases are defined.

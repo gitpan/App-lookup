@@ -8,7 +8,7 @@ use Getopt::Long qw(:config bundling no_ignore_case);
 use Text::Abbrev 'abbrev';
 use Text::Wrap 'wrap';
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 sub parse_command_line {
     GetOptions(\my %opts, 'help|h|?', 'man|m', 'version|v',
@@ -210,7 +210,7 @@ App::lookup - search the internet from your terminal
 
 =head1 VERSION
 
-Version 0.05.
+Version 0.06.
 
 =head1 SYNOPSIS
 

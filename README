@@ -2,7 +2,7 @@ NAME
     lookup - search the internet from your terminal
 
 VERSION
-    Version 0.05.
+    Version 0.06.
 
 USAGE
       lookup [--help] [--man] [--abbrevs] [--config-file FILE] [--sites]

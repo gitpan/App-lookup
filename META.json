@@ -4,7 +4,7 @@
       "Ahmad Syaltut <syaltut@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Module::Build version 0.4004, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -22,7 +22,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.40"
+            "Module::Build" : "0.4004"
          }
       },
       "runtime" : {
@@ -44,7 +44,7 @@
    "provides" : {
       "App::lookup" : {
          "file" : "lib/App/lookup.pm",
-         "version" : "0.05"
+         "version" : "0.06"
       }
    },
    "release_status" : "stable",
@@ -57,7 +57,7 @@
          "url" : "git://github.com/Syaltut/perl-App-lookup.git"
       }
    },
-   "version" : "0.05",
+   "version" : "0.06",
    "x_test_requires" : {
       "File::Spec" : "0",
       "FindBin" : "0",

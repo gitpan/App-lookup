@@ -5,7 +5,7 @@ use warnings;
 
 use App::lookup;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 App::lookup->run
 
@@ -19,7 +19,7 @@ lookup - search the internet from your terminal
 
 =head1 VERSION
 
-Version 0.05.
+Version 0.06.
 
 =head1 USAGE
 

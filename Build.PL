@@ -9,6 +9,10 @@ Module::Build->new(
     dist_version_from => 'bin/lookup',
     script_files      => [qw(bin/lookup)],
 
+    configure_requires => {
+        'Module::Build' => 0.4004,
+    },
+
     test_requires => {
         'Test::More'   => 0,
         'Test::Output' => 0,
